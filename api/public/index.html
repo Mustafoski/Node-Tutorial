@@ -1,0 +1,75 @@
+<style>
+  body {
+    margin: 2rem;
+    background-color: black;
+    color: white;
+    font-size: 24;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  td {
+    border: 1px solid gainsboro;
+    padding: 1rem;
+  }
+</style>
+
+<h1>API Directory</h1>
+
+<h2>Public Methods</h2>
+
+<div>
+  <a href="/products/detail/1"
+    ><h3><code>GET products/details/:SKU</code></h3></a
+  >
+  <p>Returns info about the SKU</p>
+</div>
+
+<div>
+  <a href="/products/search?color=Black,Blue"
+    ><h3>
+      <code>GET products/search[?property=value&property2=value2]</code>
+    </h3></a
+  >
+  <p>Returns array of products matching search criteria</p>
+  <p>TODO - Document possible key value</p>
+</div>
+
+<div>
+  <a href="/products/options/brand"
+    ><h3><code>GET products/options/:property</code></h3></a
+  >
+  <p>Returns all possible values for a field</p>
+</div>
+
+<h2>Secure Methods</h2>
+
+<div>
+  <h3><code>POST products/adjust/quantity</code></h3>
+  <p>Adjust how many items remains</p>
+  <h4>POST Parameters</h4>
+  <table>
+    <thead>
+      <tr>
+        <td>Parameter Name</td>
+        <td>Description</td>
+        <td>Example</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>token</td>
+        <td>Your provided auth token</td>
+        <td>"1234-abcd</td>
+      </tr>
+      <tr>
+        <td>SKU</td>
+        <td>The SKU of the product to be modified</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>count</td>
+        <td>How many units to add or remove</td>
+        <td>2</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
